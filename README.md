@@ -1,4 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Need API token of youtube. Create a constant called KEY and assign the token value, then export default KEY.
+
+`
+const KEY = 'RandomToken';
+`
+
+`
+export default KEY;
+`
 
 ## Available Scripts
 
