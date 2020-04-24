@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import VideoList from './components/VideoList';
+import './components/Style.css';
 
 function App() {
+
+  const [selectedVideo, setSelectedVideo] = useState(null);
+  const [videoList, setVideoList] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header setVideoList={setVideoList}></Header>
+      <VideoList videoList={videoList} setSelectedVideo={setSelectedVideo}></VideoList>
+      <footer>
+        <p>Code by José Luis de la Hoz</p>
+      </footer>
     </div>
   );
 }
