@@ -10,7 +10,7 @@ const VideoList = props => {
                 props.videoList ?
                     props.videoList.map(video => {
                         return (
-                            <VideoCard key={video.id.videoId} title={video.snippet.title} description={video.snippet.description} image={video.snippet.thumbnails.medium.url}></VideoCard>
+                            <VideoCard key={video.etag} setSelectedVideo={props.setSelectedVideo} video={video.id.videoId} title={video.snippet.title} description={video.snippet.description} image={video.snippet.thumbnails.medium.url}></VideoCard>
                         );
                     })
                 : null

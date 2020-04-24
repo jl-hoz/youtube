@@ -6,7 +6,7 @@ import './components/Style.css';
 
 function App() {
 
-  const [selectedVideo, setSelectedVideo] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState('');
   const [videoList, setVideoList] = useState(null);
 
   return (

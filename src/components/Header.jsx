@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import KEY from "../apis/youtube";
+import './Style.css';
 
 const Header = (props) => {
 
@@ -31,13 +32,13 @@ const Header = (props) => {
     }
 
     return (
-        <div>
+        <header>
             <h1>Youtube</h1>
             <input id="searchValue" type="text" placeholder="Search video..." />
             <button onClick={() => handleSearch(document.getElementById("searchValue").value)}>
                 Search
             </button>
-        </div>
+        </header>
     );
 }
 
